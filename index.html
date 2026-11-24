@@ -1,19 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minha primeira página no ar</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <h1>Minha primeira página no ar</h1>
-  <p>Feita em HTML, CSS e JavaScript.</p>
 
-  <p id="lampada" class="lampada">🌑</p>
-  <button id="interruptor" type="button">Ligar</button>
-  <p id="aviso">Luz apagada. Clique para acender.</p>
+    <main class="container">
 
-  <script src="script.js"></script>
+        <h1>Pedra, Papel e Tesoura</h1>
+        <p class="subtitulo">Escolha sua jogada!</p>
+
+        <section class="placar">
+            <div>
+                <h2>Você</h2>
+                <span id="pontos-jogador">0</span>
+            </div>
+
+            <div>
+                <h2>Computador</h2>
+                <span id="pontos-computador">0</span>
+            </div>
+        </section>
+
+        <section class="resultado">
+            <p id="mensagem">Faça sua escolha para começar!</p>
+
+            <div class="jogadas">
+                <div>
+                    <span id="escolha-jogador">❔</span>
+                    <p>Você</p>
+                </div>
+
+                <div>
+                    <span id="escolha-computador">❔</span>
+                    <p>Computador</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="opcoes">
+            <button onclick="jogar('pedra')">✊ Pedra</button>
+            <button onclick="jogar('papel')">✋ Papel</button>
+            <button onclick="jogar('tesoura')">✌️ Tesoura</button>
+        </section>
+
+        <button id="reiniciar" onclick="reiniciarJogo()">
+            Reiniciar jogo
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
